@@ -16,6 +16,7 @@ import { FloatingActions } from './components/FloatingActions';
 export const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-ivory-100 text-espresso-950 font-sans selection:bg-antiqueGold-300 selection:text-espresso-950">
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       {/* Top Concept Disclaimer */}
       <DisclaimerBanner />
 
@@ -23,7 +24,7 @@ export const App: React.FC = () => {
       <Navbar />
 
       {/* Main Content Sections */}
-      <main id="main-content" className="flex-grow">
+      <main id="main-content" tabIndex={-1} className="flex-grow">
         <Hero />
         <About />
         <BestSellers />

@@ -19,7 +19,7 @@ describe('The Old Roastery - App Component', () => {
     render(<App />);
     expect(screen.getByRole('region', { name: /Welcome to The Old Roastery/i })).toBeInTheDocument();
     expect(screen.getByRole('region', { name: /About The Old Roastery/i })).toBeInTheDocument();
-    expect(screen.getByRole('region', { name: /Fan Favourites and Best Sellers/i })).toBeInTheDocument();
+    expect(screen.getByRole('region', { name: /Featured Selections/i })).toBeInTheDocument();
     expect(screen.getByRole('region', { name: /The Old Roastery Menu/i })).toBeInTheDocument();
     expect(screen.getByRole('region', { name: /The Old Roastery Experiences/i })).toBeInTheDocument();
     expect(screen.getByRole('region', { name: /Visual Gallery/i })).toBeInTheDocument();

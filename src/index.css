@@ -58,13 +58,13 @@
 @layer components {
   .section-shell { @apply mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12; }
   .section-space { @apply py-20 sm:py-24 lg:py-28; }
-  .eyebrow { @apply text-[10px] font-medium uppercase tracking-[0.22em]; }
+  .eyebrow { @apply text-xs font-medium uppercase tracking-[0.22em]; }
   .section-title { @apply font-serif text-4xl font-normal leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl; }
   .editorial-copy { @apply text-sm leading-7 sm:text-base sm:leading-8; }
-  .action-solid { @apply inline-flex min-h-12 items-center justify-center gap-4 bg-espresso-900 px-6 text-xs font-medium text-ivory-50 transition-colors hover:bg-espresso-700 disabled:cursor-wait disabled:opacity-60; }
-  .action-outline { @apply inline-flex min-h-12 items-center justify-center gap-3 border border-ivory-400 px-6 text-xs font-medium text-espresso-900 transition-colors hover:border-espresso-700 hover:bg-ivory-200; }
-  .text-link { @apply inline-flex min-h-11 items-center gap-4 border-b border-current text-xs font-medium underline-offset-4 transition-colors hover:text-antiqueGold-600; }
-  .filter-button { @apply min-h-11 border-b-2 px-3 py-3 text-xs font-medium transition-colors sm:px-4; }
+  .action-solid { @apply inline-flex min-h-12 items-center justify-center gap-4 bg-espresso-900 px-6 text-sm font-medium text-ivory-50 transition-colors hover:bg-espresso-700 disabled:cursor-wait disabled:opacity-60; }
+  .action-outline { @apply inline-flex min-h-12 items-center justify-center gap-3 border border-ivory-400 px-6 text-sm font-medium text-espresso-900 transition-colors hover:border-espresso-700 hover:bg-ivory-200; }
+  .text-link { @apply inline-flex min-h-11 items-center gap-4 border-b border-current text-sm font-medium underline-offset-4 transition-colors hover:text-antiqueGold-600; }
+  .filter-button { @apply min-h-11 border-b-2 px-3 py-3 text-sm font-medium transition-colors sm:px-4; }
 }
 
 @layer base {
@@ -116,3 +116,8 @@
   .motion-card:hover h3 { color: #9B7846; }
 }
 @keyframes image-loading-sweep { to { transform: translateX(100%); } }
+
+.skip-link { position: fixed; left: 1rem; top: 1rem; z-index: 150; padding: 0.85rem 1.2rem; background: #1C140F; color: #FDFCF7; transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.menu-item-heading { scroll-margin-top: 9rem; }
+@media (min-width: 640px) { .gallery-photo { aspect-ratio: 4 / 5 !important; } .gallery-photo[data-shape="square"] { aspect-ratio: 1 !important; } .gallery-photo[data-shape="wide"] { aspect-ratio: 3 / 2 !important; } }

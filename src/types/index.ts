@@ -7,7 +7,6 @@ export interface MenuItem {
   description: string;
   image?: string;
   tags: string[];
-  isSignature?: boolean;
 }
 
 export interface GalleryItem {
@@ -52,6 +51,9 @@ export interface BusinessInfo {
   phone: string;
   phoneRaw: string;
   approximateCostForTwo: string;
+  openingHours: string;
+  instagramUrl: string;
+  mapEmbedUrl: string;
   mapsUrl: string;
   disclaimer: string;
   imageryDisclaimer: string;

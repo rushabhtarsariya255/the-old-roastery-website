@@ -77,7 +77,7 @@ export function ImageReveal({ className = '', imageClassName = '', direction = '
     <div ref={frame} className={twMerge('image-reveal relative overflow-hidden bg-ivory-300', className)} data-image-ready={ready} aria-busy={!ready && !failed}>
       {!failed && (parallax && desktop && !reduced ? <ParallaxLayer target={frame}>{photo}</ParallaxLayer> : photo)}
       {!ready && !failed && <div className="image-loading absolute inset-0" aria-hidden="true" />}
-      {failed && <div role="img" aria-label={`Photograph unavailable: ${imageProps.alt ?? 'café photograph'}`} className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-ivory-200 p-5 text-center text-espresso-600"><BrandLogo variant="placeholder" decorative /><span className="text-[10px] uppercase tracking-widest">Photograph unavailable</span></div>}
+      {failed && <div role="img" aria-label={`Photograph unavailable: ${imageProps.alt ?? 'café photograph'}`} className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-ivory-200 p-5 text-center text-espresso-600"><BrandLogo variant="placeholder" decorative /><span className="text-sm uppercase tracking-widest">Photograph unavailable</span></div>}
       <motion.div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10 bg-ivory-200" style={{ transformOrigin: direction === 'right' ? 'right center' : 'center top' }} initial={false} animate={direction === 'right' ? { scaleX: revealed || failed ? 0 : 1 } : { scaleY: revealed || failed ? 0 : 1 }} transition={{ duration: reduced ? 0 : 1.05, delay: reduced ? 0 : 0.08, ease }} />
     </div>
   );

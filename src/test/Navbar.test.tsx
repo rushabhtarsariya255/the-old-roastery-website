@@ -39,7 +39,7 @@ describe('Navigation interactions', () => {
     const onNavigate = vi.fn();
     render(<Navbar onNavigate={onNavigate} />);
     await user.click(screen.getByRole('button', { name: 'Open navigation menu' }));
-    const link = within(screen.getByRole('navigation', { name: 'Mobile navigation' })).getByRole('link', { name: /Best Sellers/ });
+    const link = within(screen.getByRole('navigation', { name: 'Mobile navigation' })).getByRole('link', { name: /Featured Selections/ });
     expect(link).toHaveAttribute('href', '#favourites');
     await user.click(link);
     expect(onNavigate).toHaveBeenCalledWith('favourites');
