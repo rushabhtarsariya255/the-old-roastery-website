@@ -32,26 +32,31 @@ A premium, contemporary-vintage luxury café brand experience for **The Old Roas
 ## 🚀 Getting Started
 
 ### 1. Install Dependencies
+
 ```bash
 npm install
 ```
 
 ### 2. Run Development Server
+
 ```bash
 npm run dev
 ```
 
 ### 3. Run Typecheck
+
 ```bash
 npm run typecheck
 ```
 
 ### 4. Run Unit & Component Tests
+
 ```bash
 npm run test
 ```
 
 ### 5. Build for Production
+
 ```bash
 npm run build
 ```
@@ -117,8 +122,6 @@ Reduced-motion visitors receive stable headings, immediate transitions, and no p
 6. Check a narrow mobile viewport and the mobile directory. Enable your device/browser's reduced-motion preference and confirm all content remains available without movement.
 7. Run `npm run typecheck`, `npm test`, and `npm run build` for automated verification. Unit tests cover interaction and fallback behavior; real animation timing is checked in Chrome because JSDOM mocks observers and exit lifecycles.
 
-#   t h e - o l d - r o a s t e r y - w e b s i t e  
- 
 ### Business content and accessibility update
 
 Hours and Instagram (@theoldroastery_srt) were supplied by the project owner. The map and directions use the café coordinates (21.1407724, 72.77336) linked by its Zomato listing. Menu descriptions were checked against https://www.zomato.com/surat/the-old-roastery-vesu/order on 18 November 2026; unpublished recipes are not inferred. Featured Selections replace unverified sales/signature claims. Item links clear filters, focus and scroll to an exact heading, including direct hash loads. Mobile gallery frames preserve native photo proportions; desktop compositions and reduced-motion behavior remain. A keyboard-visible skip link targets the main landmark.
