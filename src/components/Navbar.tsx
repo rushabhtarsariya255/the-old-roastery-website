@@ -21,7 +21,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 40);
+    let previous: boolean | undefined;
+    const handleScroll = () => {
+      const next = window.scrollY > 40;
+      if (next !== previous) { previous = next; setIsScrolled(next); }
+    };
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -57,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   };
 
   return (
-    <motion.header initial={reduceMotion ? false : { y: -28, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: reduceMotion ? 0 : 0.8, ease: [0.22, 1, 0.36, 1] }} ref={headerRef} className={`site-header sticky top-0 z-40 border-b ${isScrolled ? 'is-scrolled border-ivory-300 bg-ivory-100/95 shadow-sm backdrop-blur-md' : 'border-transparent bg-transparent'}`}>
+    <motion.header initial={reduceMotion ? false : { y: -28, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: reduceMotion ? 0 : 0.8, ease: [0.22, 1, 0.36, 1] }} ref={headerRef} className={`site-header sticky top-0 z-40 border-b ${isScrolled ? 'is-scrolled border-ivory-300 bg-ivory-100/95 shadow-sm' : 'border-transparent bg-transparent'}`}>
       <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between gap-6 px-5 sm:h-24 sm:px-8 lg:px-12">
         <a href="#top" aria-label="The Old Roastery - Home" className="flex shrink-0 items-center gap-3 text-espresso-950" onClick={() => handleNavigate('#top')}>
           <BrandLogo />

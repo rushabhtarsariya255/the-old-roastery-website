@@ -1,7 +1,7 @@
 ﻿import React, { Children, isValidElement, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useInView, useScroll, useSpring, useTransform, useIsPresent } from 'framer-motion';
 import { twMerge } from 'tailwind-merge';
-import { useDesktopParallax, useReducedMotionPreference, useRevealMotion } from './motion';
+import { useDesktopParallax, useReducedMotionPreference } from './motion';
 import { BrandLogo } from './BrandLogo';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -29,7 +29,7 @@ export function MaskedHeading({ children, className, as = 'h2', entrance = false
     <Heading ref={ref} className={className}>
       {lines.map((line, index) => (
         <span key={index} className="heading-mask">
-          <motion.span className="heading-line" initial={reduced || !canObserve ? false : { y: '112%', rotate: 2 }} animate={visible ? { y: '0%', rotate: 0 } : { y: '112%', rotate: 2 }} transition={{ duration: reduced ? 0 : 1.05, delay: reduced ? 0 : (entrance ? 0.18 : 0) + index * 0.16, ease }}>
+          <motion.span className="heading-line" initial={reduced || !canObserve ? false : { y: '105%' }} animate={visible ? { y: '0%' } : { y: '112%', rotate: 2 }} transition={{ duration: reduced ? 0 : 0.8, delay: reduced ? 0 : (entrance ? 0.18 : 0) + index * 0.1, ease }}>
             {line}
           </motion.span>
         </span>
@@ -69,7 +69,7 @@ export function ImageReveal({ className = '', imageClassName = '', direction = '
   }, [imageProps.src]);
   const revealed = reduced || ((entrance || inView || typeof IntersectionObserver === 'undefined') && ready);
   const photo = (
-    <motion.div className="h-full w-full" initial={false} animate={{ scale: reduced ? 1 : revealed ? 1 : 1.13, y: reduced || revealed ? 0 : 24 }} transition={{ duration: reduced ? 0 : 1.45, ease }}>
+    <motion.div className="h-full w-full" initial={false} animate={{ scale: reduced ? 1 : revealed ? 1 : 1.06, y: reduced || revealed ? 0 : 24 }} transition={{ duration: reduced ? 0 : 1, ease }}>
       <img {...imageProps} ref={image} className={`h-full w-full object-cover ${imageClassName}`} onLoad={(event) => { setReady(true); onLoad?.(event); }} onError={(event) => { setFailed(true); onError?.(event); }} />
     </motion.div>
   );
@@ -94,9 +94,8 @@ interface FilterItemProps {
 export const FilterItem = React.forwardRef<HTMLElement, FilterItemProps>(function FilterItem({ children, className, index, as = 'article' }, ref) {
   const present = useIsPresent();
   const reduced = useReducedMotionPreference();
-  const reveal = useRevealMotion();
   const Component = as === 'figure' ? motion.figure : motion.article;
-  return <Component ref={ref} {...reveal(index, 'scale')} layout={reduced ? false : 'position'} exit={{ opacity: 0, scale: reduced ? 1 : 0.94, transition: { duration: reduced ? 0 : 0.22, delay: 0 } }} transition={{ duration: reduced ? 0 : 0.7, delay: reduced ? 0 : (index % 3) * 0.1, layout: { duration: reduced ? 0 : 0.5, ease } }} aria-hidden={!present || undefined} {...{ inert: present ? undefined : '' }} style={{ pointerEvents: present ? 'auto' : 'none' }} className={className}>{children}</Component>;
+  return <Component ref={ref} initial={reduced || typeof IntersectionObserver === 'undefined' ? false : { opacity: 0 }} animate={reduced ? { opacity: 1 } : undefined} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: 0.1, margin: '0px 0px 48px 0px' }} layout={reduced ? false : 'position'} exit={{ opacity: 0, transition: { duration: reduced ? 0 : 0.16, delay: 0 } }} transition={{ duration: reduced ? 0 : 0.35, ease, delay: reduced ? 0 : (index % 3) * 0.045, layout: { duration: reduced ? 0 : 0.35, ease } }} aria-hidden={!present || undefined} {...{ inert: present ? undefined : '' }} style={{ pointerEvents: present ? 'auto' : 'none' }} className={className}>{children}</Component>;
 });
 
 interface TransitionImageProps extends React.ImgHTMLAttributes<HTMLImageElement> { direction?: number; fill?: boolean; }
@@ -109,18 +108,33 @@ function TransitionFrame({ direction = 1, fill = false, onLoad, onError, ...prop
   const [failed, setFailed] = useState(false);
   useEffect(() => { if (ref.current?.complete && ref.current.naturalWidth) setReady(true); }, []);
   return (
-    <motion.div aria-hidden={!present || undefined} className={`${fill ? 'absolute inset-0' : 'relative col-start-1 row-start-1 min-h-32'} flex min-w-0 items-center justify-center overflow-hidden`} initial={reduced ? false : { opacity: 0, x: direction * 32, scale: 1.03 }} animate={{ opacity: 1, x: 0, scale: 1 }} variants={{ exit: (exitDirection: number) => ({ opacity: 0, x: reduced ? 0 : exitDirection * -24, scale: reduced ? 1 : 0.98 }) }} exit="exit" transition={{ duration: reduced ? 0 : 0.55, ease }}>
+    <motion.div aria-hidden={!present || undefined} className={`${fill ? 'absolute inset-0' : 'relative col-start-1 row-start-1 min-h-32'} flex min-w-0 items-center justify-center overflow-hidden`} initial={reduced ? false : { opacity: 0, x: direction * 12 }} animate={{ opacity: 1, x: 0 }} variants={{ exit: (exitDirection: number) => ({ opacity: 0, x: reduced ? 0 : exitDirection * -12 }) }} exit="exit" transition={{ duration: reduced ? 0 : 0.35, ease }}>
       {!ready && !failed && <div className="image-loading absolute inset-0" aria-hidden="true" />}
       {failed ? <p role="status" className="p-8 text-center text-sm">This photograph could not load. Try another image.</p> : <img {...props} ref={ref} style={{ ...props.style, opacity: ready ? 1 : 0 }} onLoad={(event) => { setReady(true); onLoad?.(event); }} onError={(event) => { setFailed(true); onError?.(event); }} />}
     </motion.div>
   );
 }
 
+// Keep the last displayed photograph until the requested source has loaded and decoded.
+// Obsolete loads cannot replace a newer selection during rapid navigation.
 export function TransitionImage(props: TransitionImageProps) {
-  return <div className={`relative h-full min-w-0 overflow-hidden ${props.fill ? 'w-full' : 'grid items-center justify-items-center'}`}><AnimatePresence initial={false} custom={props.direction ?? 1}><TransitionFrame key={props.src} {...props} /></AnimatePresence></div>;
+  const [displayed, setDisplayed] = useState(props);
+  const latest = useRef(props.src);
+  latest.current = props.src;
+  const pending = props.src !== displayed.src;
+  const current = pending ? displayed : props;
+  const commit = () => { if (latest.current === props.src) setDisplayed(props); };
+  return <div aria-busy={pending} className={`relative h-full min-w-0 overflow-hidden ${props.fill ? 'w-full' : 'grid items-center justify-items-center'}`}>
+    {pending && <img key={props.src} src={props.src} srcSet={props.srcSet} sizes={props.sizes} alt="" aria-hidden="true" className="hidden" data-pending-image="true" onLoad={async (event) => {
+      const image = event.currentTarget;
+      try { await image.decode?.(); } catch { /* The visible frame handles an unusable image. */ }
+      commit();
+    }} onError={commit} />}
+    <AnimatePresence initial={false} custom={props.direction ?? 1}><TransitionFrame key={current.src} {...current} direction={props.direction} /></AnimatePresence>
+  </div>;
 }
 
 export function SectionRule({ dark = false }: { dark?: boolean }) {
   const reduced = useReducedMotionPreference();
-  return <motion.div aria-hidden="true" className={`pointer-events-none absolute inset-x-0 top-0 h-px ${dark ? 'bg-antiqueGold-500/40' : 'bg-ivory-400'}`} initial={false} animate={reduced ? { scaleX: 1 } : undefined} whileInView={reduced ? undefined : { scaleX: [0, 1] }} viewport={{ once: true }} style={{ transformOrigin: 'left center' }} transition={{ duration: reduced ? 0 : 1.3, ease }} />;
+  return <motion.div aria-hidden="true" className={`pointer-events-none absolute inset-x-0 top-0 h-px ${dark ? 'bg-antiqueGold-500/40' : 'bg-ivory-400'}`} initial={reduced || typeof IntersectionObserver === 'undefined' ? false : { scaleX: 0 }} animate={reduced || typeof IntersectionObserver === 'undefined' ? { scaleX: 1 } : undefined} whileInView={reduced ? undefined : { scaleX: 1 }} viewport={{ once: true }} style={{ transformOrigin: 'left center' }} transition={{ duration: reduced ? 0 : 1.3, ease }} />;
 }

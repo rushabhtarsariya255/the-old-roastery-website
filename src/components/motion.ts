@@ -40,28 +40,27 @@ export function useEntranceMotion() {
     initial: reduceMotion ? false : { opacity: 0.2, y: 28 },
     animate: { opacity: 1, y: 0 },
     transition: {
-      duration: reduceMotion ? 0 : 0.85,
+      duration: reduceMotion ? 0 : 0.655,
       delay: reduceMotion ? 0 : delay,
       ease: [0.22, 1, 0.36, 1],
     },
   });
 }
 
-// Start visible: a missing observer or interrupted animation must never hide content.
+// Set the reveal origin before observation so entering never flashes visible, then dim.
 export function useRevealMotion() {
   const reduceMotion = useReducedMotionPreference();
 
   return (index = 0, direction: 'up' | 'left' | 'right' | 'scale' = 'up'): MotionProps => ({
-    initial: false,
-    animate: reduceMotion ? { opacity: 1, x: 0, y: 0, scale: 1 } : undefined,
+    initial: reduceMotion || typeof IntersectionObserver === 'undefined' ? false : { opacity: 0, ...(direction === 'up' ? { y: 24 } : direction === 'scale' ? { y: 16 } : { x: direction === 'left' ? -20 : 20 }) },
+    animate: reduceMotion || typeof IntersectionObserver === 'undefined' ? { opacity: 1, x: 0, y: 0, scale: 1 } : undefined,
     whileInView: reduceMotion ? undefined : {
-      opacity: [0.15, 1],
-      ...(direction === 'up' ? { y: [40, 0] } : direction === 'scale' ? { scale: [0.94, 1] } : { x: [direction === 'left' ? -32 : 32, 0] }),
+      opacity: 1, x: 0, y: 0,
     },
-    viewport: { once: true, amount: 0.2 },
+    viewport: { once: true, amount: 0.12, margin: '0px 0px 48px 0px' },
     transition: {
       duration: reduceMotion ? 0 : 0.8,
-      delay: reduceMotion ? 0 : (index % 3) * 0.12,
+      delay: reduceMotion ? 0 : (index % 3) * 0.07,
       ease: [0.22, 1, 0.36, 1],
     },
   });

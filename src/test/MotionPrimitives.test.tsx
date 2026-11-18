@@ -1,6 +1,6 @@
-﻿import { fireEvent, render, screen } from '@testing-library/react';
+﻿import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { ImageReveal, MaskedHeading } from '../components/MotionPrimitives';
+import { ImageReveal, MaskedHeading, TransitionImage } from '../components/MotionPrimitives';
 
 afterEach(() => vi.unstubAllGlobals());
 
@@ -45,4 +45,16 @@ describe('Motion image and heading boundaries', () => {
       expect(line.style.transform).not.toContain('112%');
     }
   });
+  it('retains the visible image until a replacement loads, and ignores obsolete requests', async () => {
+    const { rerender, container } = render(<TransitionImage src="/first.jpg" alt="First" />);
+    rerender(<TransitionImage src="/second.jpg" alt="Second" />);
+    expect(screen.getByRole('img', { name: 'First' })).toBeInTheDocument();
+    const obsolete = container.querySelector('[data-pending-image]')!;
+    rerender(<TransitionImage src="/third.jpg" alt="Third" />);
+    fireEvent.load(obsolete);
+    expect(screen.queryByRole('img', { name: 'Second' })).not.toBeInTheDocument();
+    fireEvent.load(container.querySelector('[data-pending-image]')!);
+    await waitFor(() => expect(screen.getByRole('img', { name: 'Third' })).toBeInTheDocument());
+  });
+
 });

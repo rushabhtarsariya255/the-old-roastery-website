@@ -19,7 +19,7 @@ const SelectionCard: React.FC<{ item: MenuItem; index: number; featured?: boolea
   return (
     <article className={`group motion-card flex h-full flex-col ${featured ? 'bg-espresso-900 text-ivory-50' : 'border border-ivory-300 bg-ivory-100 p-6 text-espresso-950'}`}>
       {photo && <a href={`#menu-${item.id}`} aria-label={`Explore ${item.name} on the menu`} className="relative block h-96 shrink-0 overflow-hidden bg-ivory-300 lg:h-[480px]">
-        <ImageReveal className="absolute inset-0" src={photo.src} srcSet={photo.srcSet} sizes={FEATURE_IMAGE_SIZES} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" imageClassName="h-full w-full object-cover object-[center_75%] transition-transform duration-700 motion-safe:group-hover:scale-105" />
+        <ImageReveal className="absolute inset-0" src={photo.src} srcSet={photo.srcSet} sizes={FEATURE_IMAGE_SIZES} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" imageClassName="h-full w-full object-cover object-[center_75%] " />
         <span className="absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-ivory-100 text-sm text-espresso-900">0{index + 1}</span>
         <span className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-ivory-100 text-espresso-900"><ArrowUpRight className="h-4 w-4" aria-hidden="true" /></span>
       </a>}

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 import { Experiences } from '../components/Experiences';
@@ -13,6 +13,7 @@ describe('Experience selectors', () => {
     await user.keyboard('{Enter}');
     expect(kitchen).toHaveAttribute('aria-pressed', 'true');
     expect(screen.getByRole('button', { name: /Coffee at the Roastery/ })).toHaveAttribute('aria-pressed', 'false');
-    expect(screen.getByRole('img')).toHaveAccessibleName(PHOTOS.experienceKitchen.alt);
+    fireEvent.load(document.querySelector('[data-pending-image]')!);
+    await waitFor(() => expect(screen.getByRole('img')).toHaveAccessibleName(PHOTOS.experienceKitchen.alt));
   });
 });

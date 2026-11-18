@@ -10,7 +10,7 @@ describe('Hero entrance regression', () => {
     const headline = screen.getByRole('heading', { level: 1 });
     const lines = headline.querySelectorAll<HTMLElement>('.heading-line');
     expect(lines).toHaveLength(3);
-    expect(lines[0].style.transform).toContain('112%');
+    expect(Number(lines[0].style.transform.match(/translateY\(([^%]+)%\)/)?.[1])).toBeGreaterThan(100);
     await waitFor(() => expect(lines[2].style.transform).toBe('none'), { timeout: 3000 });
     expect(headline).toBeVisible();
   });
