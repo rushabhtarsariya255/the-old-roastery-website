@@ -1,0 +1,204 @@
+{
+  "reviewed": "2026-11-18",
+  "suppliedLinksAccessible": 6,
+  "splitFourthLinkRejoined": true,
+  "assets": [
+    {
+      "key": "interior",
+      "placement": "Hero",
+      "source": "public/images/the-old-roastery-interior-seating.jpg",
+      "sourceKind": "Existing project photograph, original preserved",
+      "width": 1360,
+      "height": 907,
+      "full": {
+        "file": "public/images/the-old-roastery-interior-seating.jpg",
+        "bytes": 146286,
+        "sha256": "5bcabfd74c8fb28470592fbb097fa83ed2a5d1aff730fba38522f041db812788"
+      },
+      "differenceHash": "1b5f1f4f0f1b181a"
+    },
+    {
+      "key": "coffee-counter",
+      "placement": "Our Story",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RGD0_0IHFW30zDWuaczTAX4YwgQGwnPgl9pdiJOItfmpq8V6CuoKllDMPziJSixDZxOamfZ_PfGuW0iYMRZv1WSswquEGdjSRuoRKrjyVXs1Mfoagqs2nyaMy8jKbUw0CGG2nZPG8D-uyF=s1360-w1360-h1020-rw",
+      "sourceKind": "User-supplied Google image URL",
+      "width": 680,
+      "height": 1020,
+      "full": {
+        "file": "public/images/curated/coffee-counter.webp",
+        "bytes": 84620,
+        "sha256": "f4521023f9e5172dcbef456fb77cfc7f183459419756a03f72c8c8c8ffa398ef"
+      },
+      "differenceHash": "91a9c58707878300"
+    },
+    {
+      "key": "cranberry",
+      "placement": "Best Sellers featured drink",
+      "source": "public/images/the-old-roastery-cranberry-cold-brew.jpg",
+      "sourceKind": "Existing project photograph, original preserved",
+      "width": 680,
+      "height": 1020,
+      "full": {
+        "file": "public/images/the-old-roastery-cranberry-cold-brew.jpg",
+        "bytes": 70020,
+        "sha256": "d3eced0246bc9faaf795f2d9fc2b9599d33335fdddb5f78d7320c061713f8c13"
+      },
+      "differenceHash": "767377357730524"
+    },
+    {
+      "key": "pizza-pair",
+      "placement": "Menu kitchen photograph",
+      "source": "public/images/the-old-roastery-neapolitan-pizzas.jpg",
+      "sourceKind": "Existing project photograph, original preserved",
+      "width": 816,
+      "height": 1020,
+      "full": {
+        "file": "public/images/the-old-roastery-neapolitan-pizzas.jpg",
+        "bytes": 148774,
+        "sha256": "57ff881a631848a90830d33cedffc1880e7a0e01eb7048f02222d40f0f73ed45"
+      },
+      "differenceHash": "3123cb0676ba7713"
+    },
+    {
+      "key": "sandwiches",
+      "placement": "Menu kitchen photograph",
+      "source": "public/images/the-old-roastery-artisanal-sandwich.jpg",
+      "sourceKind": "Existing project photograph, original preserved",
+      "width": 681,
+      "height": 1020,
+      "full": {
+        "file": "public/images/the-old-roastery-artisanal-sandwich.jpg",
+        "bytes": 87190,
+        "sha256": "eb28e34b8ac6134101addf3fd8839fd85585dd1c50f5beeda529a109c46fd72f"
+      },
+      "differenceHash": "331c911303431938"
+    },
+    {
+      "key": "layered-coffee",
+      "placement": "Experiences: coffee",
+      "source": "public/images/the-old-roastery-specialty-coffee.jpg",
+      "sourceKind": "Existing project photograph, original preserved",
+      "width": 680,
+      "height": 1020,
+      "full": {
+        "file": "public/images/the-old-roastery-specialty-coffee.jpg",
+        "bytes": 34448,
+        "sha256": "e763f987c6c7912059b36350ec70b99ea783062ec1b0a35e6894d78793dd15f6"
+      },
+      "differenceHash": "2f08f09c9c992103"
+    },
+    {
+      "key": "plated-dish",
+      "placement": "Experiences: kitchen",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QTeYBe6Czy6iVDs94Kbz55yxO7HzVb-1Tf5SneSb3JZ5RBt0wxJDhSS51shzw75_c_6g56V_sl9uPkAH1JeAjGMvtFC1Itb5D9Vnqt9TC7djBeXIMcVARkzwI6xnkdHGM-gXmfEeIZ-g0l=s1360-w1360-h1020-rw",
+      "sourceKind": "User-supplied Google image URL",
+      "width": 816,
+      "height": 1020,
+      "full": {
+        "file": "public/images/curated/plated-dish.webp",
+        "bytes": 88472,
+        "sha256": "d74dcfb83eba66499f1ddd966cc73bd07b629b78a37f846f270ae2f122944b39"
+      },
+      "differenceHash": "226e32668c190307"
+    },
+    {
+      "key": "table-setting",
+      "placement": "Experiences: space",
+      "source": "public/images/the-old-roastery-table-ambience.jpg",
+      "sourceKind": "Existing project photograph, original preserved",
+      "width": 680,
+      "height": 1020,
+      "full": {
+        "file": "public/images/the-old-roastery-table-ambience.jpg",
+        "bytes": 82658,
+        "sha256": "90674cfba25de5b563be88d0b85b8af467dabdf182613d41a7d4be3b8fdfbe02"
+      },
+      "differenceHash": "baeaecf3ce12ce9e"
+    },
+    {
+      "key": "pour-over",
+      "placement": "Gallery",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QZxmdvqRJ0MFCNmxB0QQC1UMr6B86fX8tiXr-XyalS8wp_-URB9gu6SWkaz54ZQ6O_W9S0KStKGsTJFvdpeOnJxkp8Y4z4PxzoHf_SdC7wDtEh2SewnesgQAvqpBoFXH0dzUOjE4hew4Y=s1360-w1360-h1020-rw",
+      "sourceKind": "User-supplied Google image URL",
+      "width": 680,
+      "height": 1020,
+      "full": {
+        "file": "public/images/curated/pour-over.webp",
+        "bytes": 53082,
+        "sha256": "69b92c1bf56837e60b2e367453c09d59d72038204093113a2220fed8187656cd"
+      },
+      "differenceHash": "2022e2c7cd318959"
+    },
+    {
+      "key": "pizza-drink",
+      "placement": "Gallery",
+      "source": "public/images/the-old-roastery-artisan-pizza-drink.jpg",
+      "sourceKind": "Existing project photograph, original preserved",
+      "width": 680,
+      "height": 1020,
+      "full": {
+        "file": "public/images/the-old-roastery-artisan-pizza-drink.jpg",
+        "bytes": 59612,
+        "sha256": "918591b1e5884734cb76ea3091a9a310204a2f159524e7f72d58a823d5a6761b"
+      },
+      "differenceHash": "ffffff797e47bc7f"
+    },
+    {
+      "key": "exterior",
+      "placement": "Gallery",
+      "source": "public/images/the-old-roastery-exterior.jpg",
+      "sourceKind": "Existing project photograph, original preserved",
+      "width": 680,
+      "height": 1020,
+      "full": {
+        "file": "public/images/the-old-roastery-exterior.jpg",
+        "bytes": 145446,
+        "sha256": "ce4c51da1ae5d8f4298d56e32237d0b358cfc033c7342a342932e74c1e99c182"
+      },
+      "differenceHash": "13db1a0a10909814"
+    },
+    {
+      "key": "citrus-drink",
+      "placement": "Gallery",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QMo97lh-GLtpvJkI-Ld3FhjF1QQXrx37bKem16ri-z4zwk5VWr1u_GNas0TNaMXCNVOaPQbtIa_PR-3ZfJ1UEcRBWfOKRj9f78ELC8Sv8pklqbQnbZdVSadUb5phf8ds0tX5zeRU17G1pS=s1360-w1360-h1020-rw",
+      "sourceKind": "User-supplied Google image URL",
+      "width": 680,
+      "height": 1020,
+      "full": {
+        "file": "public/images/curated/citrus-drink.webp",
+        "bytes": 55550,
+        "sha256": "eadd09c9a4d464b1ba7c65127c8d82702392576173240ae80bad2d83ea17049e"
+      },
+      "differenceHash": "7a7e7e5e16a9a805"
+    },
+    {
+      "key": "croissant",
+      "placement": "Gallery",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SKk-Gld9JByFHmKI5nyzLpa8fuibFexmSKy67787E0NIRciOUVVFQkYSIy1bT5ezPmCbaXYPcIefmJ4po-aGPrqN9-wjLhjTI-3eQmzXZozOZknr7NepQqVINvsgqcvzhw8hyGLKXnk20=s1360-w1360-h1020-rw",
+      "sourceKind": "User-supplied Google image URL",
+      "width": 680,
+      "height": 1020,
+      "full": {
+        "file": "public/images/curated/croissant.webp",
+        "bytes": 43730,
+        "sha256": "8abfc6985cab32ab3184b4b49b776f364d3334d7978bff63029008a2497fc493"
+      },
+      "differenceHash": "3e1f1f66710000"
+    },
+    {
+      "key": "iced-coffee",
+      "placement": "Gallery",
+      "source": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T9eNeQudtsgUbfkC7MoQkuC1Xv2aOFDr6Aqzshl9qsGSzXOlyWqlPuFKqDt3bb7r4GDHc4bTfrUw7M7E59X_5zlf9LGrxbKiKGwX9XiRJw34zppJiCx4IQ0DJCkKBfJIIDoTEVPRHTOVc=s1360-w1360-h1020-rw",
+      "sourceKind": "User-supplied Google image URL",
+      "width": 816,
+      "height": 1020,
+      "full": {
+        "file": "public/images/curated/iced-coffee.webp",
+        "bytes": 149626,
+        "sha256": "cb5f4e072f0edb175243a757f1fe77240c44e192839f4a1b809694adb0d37184"
+      },
+      "differenceHash": "bdba360f31314143"
+    }
+  ],
+  "storagePolicy": "One full-quality local source per unique photograph. Original project files retained; no reduced-resolution variants."
+}

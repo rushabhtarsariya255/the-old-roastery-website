@@ -1,0 +1,210 @@
+{
+  "approvedScope": "8 exact copies and 14 lower-resolution variants; originals and unrelated assets preserved",
+  "removedFiles": [
+    {
+      "file": "public/images/curated/interior.webp",
+      "bytes": 146286,
+      "sha256": "5bcabfd74c8fb28470592fbb097fa83ed2a5d1aff730fba38522f041db812788",
+      "reason": "Exact copy of protected original",
+      "retained": "public/images/the-old-roastery-interior-seating.jpg"
+    },
+    {
+      "file": "public/images/curated/interior-480.webp",
+      "bytes": 27462,
+      "sha256": "c75243aa752a9efae99a0679f2441b04e1a35805ea50fcf1098ef58421e64dac",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/the-old-roastery-interior-seating.jpg"
+    },
+    {
+      "file": "public/images/curated/coffee-counter-480.webp",
+      "bytes": 40186,
+      "sha256": "32fae49d72fd471be0135563075352de0280c4b40411b97fe74472a089672ccb",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/curated/coffee-counter.webp"
+    },
+    {
+      "file": "public/images/curated/cranberry.webp",
+      "bytes": 70020,
+      "sha256": "d3eced0246bc9faaf795f2d9fc2b9599d33335fdddb5f78d7320c061713f8c13",
+      "reason": "Exact copy of protected original",
+      "retained": "public/images/the-old-roastery-cranberry-cold-brew.jpg"
+    },
+    {
+      "file": "public/images/curated/cranberry-480.webp",
+      "bytes": 36476,
+      "sha256": "19f7a8856401283ddbeb4c5db580a8a360b45af4a3439b53762ba13320a83ca8",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/the-old-roastery-cranberry-cold-brew.jpg"
+    },
+    {
+      "file": "public/images/curated/pizza-pair.webp",
+      "bytes": 148774,
+      "sha256": "57ff881a631848a90830d33cedffc1880e7a0e01eb7048f02222d40f0f73ed45",
+      "reason": "Exact copy of protected original",
+      "retained": "public/images/the-old-roastery-neapolitan-pizzas.jpg"
+    },
+    {
+      "file": "public/images/curated/pizza-pair-480.webp",
+      "bytes": 63386,
+      "sha256": "9f3fef799663947962ad51b3710d3dd1e020bbee93b14dfaefea6ad27409d0c1",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/the-old-roastery-neapolitan-pizzas.jpg"
+    },
+    {
+      "file": "public/images/curated/sandwiches.webp",
+      "bytes": 87190,
+      "sha256": "eb28e34b8ac6134101addf3fd8839fd85585dd1c50f5beeda529a109c46fd72f",
+      "reason": "Exact copy of protected original",
+      "retained": "public/images/the-old-roastery-artisanal-sandwich.jpg"
+    },
+    {
+      "file": "public/images/curated/sandwiches-480.webp",
+      "bytes": 52186,
+      "sha256": "efb8595e38afcd9d34b141dfaf9e080f06a35558666ce7611ed1f0f1c29f6dee",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/the-old-roastery-artisanal-sandwich.jpg"
+    },
+    {
+      "file": "public/images/curated/layered-coffee.webp",
+      "bytes": 34448,
+      "sha256": "e763f987c6c7912059b36350ec70b99ea783062ec1b0a35e6894d78793dd15f6",
+      "reason": "Exact copy of protected original",
+      "retained": "public/images/the-old-roastery-specialty-coffee.jpg"
+    },
+    {
+      "file": "public/images/curated/layered-coffee-480.webp",
+      "bytes": 16934,
+      "sha256": "9683951c90ffc0880fabfbe42a45e10f2310f0b4dbb9fedf8ba7cb70256db55b",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/the-old-roastery-specialty-coffee.jpg"
+    },
+    {
+      "file": "public/images/curated/plated-dish-480.webp",
+      "bytes": 34944,
+      "sha256": "6dabda4ee4a5e1a55fd8472d38b6359b0b59016f4f4f4645dca6864f02f951f0",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/curated/plated-dish.webp"
+    },
+    {
+      "file": "public/images/curated/table-setting.webp",
+      "bytes": 82658,
+      "sha256": "90674cfba25de5b563be88d0b85b8af467dabdf182613d41a7d4be3b8fdfbe02",
+      "reason": "Exact copy of protected original",
+      "retained": "public/images/the-old-roastery-table-ambience.jpg"
+    },
+    {
+      "file": "public/images/curated/table-setting-480.webp",
+      "bytes": 40622,
+      "sha256": "91374bfa208bf29b3b6d0255ebfdc689a9bc6490bf11fdc633f08183ef8d6615",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/the-old-roastery-table-ambience.jpg"
+    },
+    {
+      "file": "public/images/curated/pour-over-480.webp",
+      "bytes": 27922,
+      "sha256": "01cca3e55aba401feb565cc2663db32bf854113cdbaec84a603724042fb44460",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/curated/pour-over.webp"
+    },
+    {
+      "file": "public/images/curated/pizza-drink.webp",
+      "bytes": 59612,
+      "sha256": "918591b1e5884734cb76ea3091a9a310204a2f159524e7f72d58a823d5a6761b",
+      "reason": "Exact copy of protected original",
+      "retained": "public/images/the-old-roastery-artisan-pizza-drink.jpg"
+    },
+    {
+      "file": "public/images/curated/pizza-drink-480.webp",
+      "bytes": 29654,
+      "sha256": "0f10d9a4cb5082a371a6e4086d58c4d3cbf425272bd77ed8e4e20e4c52ba6b82",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/the-old-roastery-artisan-pizza-drink.jpg"
+    },
+    {
+      "file": "public/images/curated/exterior.webp",
+      "bytes": 145446,
+      "sha256": "ce4c51da1ae5d8f4298d56e32237d0b358cfc033c7342a342932e74c1e99c182",
+      "reason": "Exact copy of protected original",
+      "retained": "public/images/the-old-roastery-exterior.jpg"
+    },
+    {
+      "file": "public/images/curated/exterior-480.webp",
+      "bytes": 87950,
+      "sha256": "af5fa06c7933ad59cd21d940f7abc79d180c209a579c44f6df2becc5b365b8d5",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/the-old-roastery-exterior.jpg"
+    },
+    {
+      "file": "public/images/curated/citrus-drink-480.webp",
+      "bytes": 26782,
+      "sha256": "11184ab2b3eb3b94e04a49ba3d861309bae107846e7728597ec07f253cf0d68e",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/curated/citrus-drink.webp"
+    },
+    {
+      "file": "public/images/curated/croissant-480.webp",
+      "bytes": 21442,
+      "sha256": "e9fd5f58ab029e34e0ddba67050be3f601afd5638f93696d4eabb074ed0e8697",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/curated/croissant.webp"
+    },
+    {
+      "file": "public/images/curated/iced-coffee-480.webp",
+      "bytes": 55538,
+      "sha256": "e4494f9b80d83269f0570adc289cd01a0873293803986d007b5a2b50227690a6",
+      "reason": "Lower-resolution variant",
+      "retained": "public/images/curated/iced-coffee.webp"
+    }
+  ],
+  "bytesRemoved": 1335918,
+  "protectedFiles": [
+    {
+      "file": "public/images/the-old-roastery-artisan-pizza-drink.jpg",
+      "sha256": "918591b1e5884734cb76ea3091a9a310204a2f159524e7f72d58a823d5a6761b"
+    },
+    {
+      "file": "public/images/the-old-roastery-artisanal-sandwich.jpg",
+      "sha256": "eb28e34b8ac6134101addf3fd8839fd85585dd1c50f5beeda529a109c46fd72f"
+    },
+    {
+      "file": "public/images/the-old-roastery-cranberry-cold-brew.jpg",
+      "sha256": "d3eced0246bc9faaf795f2d9fc2b9599d33335fdddb5f78d7320c061713f8c13"
+    },
+    {
+      "file": "public/images/the-old-roastery-exterior.jpg",
+      "sha256": "ce4c51da1ae5d8f4298d56e32237d0b358cfc033c7342a342932e74c1e99c182"
+    },
+    {
+      "file": "public/images/the-old-roastery-grilled-sourdough.jpg",
+      "sha256": "4c6179cb6ea03970c35716c49ebdb74765969f49051330238e0c51808ea1fcdb"
+    },
+    {
+      "file": "public/images/the-old-roastery-hummus-falafel-platter.jpg",
+      "sha256": "63487bca985615f491240d61e05bd0ce3e67fd13e532a5ed72dcb929e764651d"
+    },
+    {
+      "file": "public/images/the-old-roastery-interior-seating.jpg",
+      "sha256": "5bcabfd74c8fb28470592fbb097fa83ed2a5d1aff730fba38522f041db812788"
+    },
+    {
+      "file": "public/images/the-old-roastery-neapolitan-pizzas.jpg",
+      "sha256": "57ff881a631848a90830d33cedffc1880e7a0e01eb7048f02222d40f0f73ed45"
+    },
+    {
+      "file": "public/images/the-old-roastery-pesto-pizza.jpg",
+      "sha256": "244fef8f9190af15c5747110c23e92ddeb2339134afe38a323d5be4bce21bd84"
+    },
+    {
+      "file": "public/images/the-old-roastery-specialty-coffee.jpg",
+      "sha256": "e763f987c6c7912059b36350ec70b99ea783062ec1b0a35e6894d78793dd15f6"
+    },
+    {
+      "file": "public/images/the-old-roastery-table-ambience.jpg",
+      "sha256": "90674cfba25de5b563be88d0b85b8af467dabdf182613d41a7d4be3b8fdfbe02"
+    },
+    {
+      "file": "public/favicon.svg",
+      "sha256": "07d795e1297e0390fa16ff3236b7098db75b277637f0d6ef86a2c3865a4029d9"
+    }
+  ]
+}

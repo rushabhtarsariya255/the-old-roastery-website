@@ -1,0 +1,85 @@
+# Dependencies
+node_modules/
+.pnp.*
+
+# Build outputs and test reports
+dist/
+dist-ssr/
+build/
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Environment files (keep sanitized examples shareable)
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.template
+*.local
+
+# Local credentials and private keys
+.aws/
+.ssh/
+.npmrc
+.netrc
+.git-credentials
+secrets/
+credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+credentials.json
+service-account*.json
+serviceAccount*.json
+
+# Logs and runtime state
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+*.pid
+*.pid.lock
+
+# Tool caches and local agent state
+.cache/
+.vite/
+.vitest/
+.eslintcache
+.stylelintcache
+.npm/
+.pnpm-store/
+.codex/
+
+# Temporary files and local backups
+tmp/
+temp/
+.tmp/
+*.tmp
+*.temp
+*.bak
+*.orig
+*~
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
