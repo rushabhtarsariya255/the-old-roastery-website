@@ -65,7 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between gap-6 px-5 sm:h-24 sm:px-8 lg:px-12">
         <a href="#top" aria-label="The Old Roastery - Home" className="flex shrink-0 items-center gap-3 text-espresso-950" onClick={() => handleNavigate('#top')}>
           <BrandLogo />
-          <span className="hidden max-w-32 text-sm uppercase leading-5 tracking-[0.18em] text-espresso-600 sm:block">Coffee, company & a little pause</span>
+          <span className="whitespace-nowrap font-serif text-base font-normal leading-tight tracking-tight text-espresso-950 sm:text-xl">The Old Roastery</span>
         </a>
         <nav aria-label="Main navigation" className="hidden items-center gap-5 xl:flex">
           {navLinks.map((link) => <a key={link.href} href={link.href} onClick={() => handleNavigate(link.href)} className="py-3 text-sm font-medium tracking-wide text-espresso-700 decoration-antiqueGold-500 underline-offset-8 transition-colors hover:text-espresso-950 hover:underline">{link.label}</a>)}
